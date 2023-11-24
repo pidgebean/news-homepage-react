@@ -212,8 +212,8 @@ h2{
 }
 
 @media (max-width: 500px){
-  main,.featured .feat-img, .acticle-preview, .acticle-preview h2, .acticle-preview p,.newbox,.articles, .article{
-    width: 600px;
+  main,.featured .feat-img, .newbox,.articles, .article{
+    width: 43.75em;
     flex-direction: colummax;
   }
 
@@ -224,6 +224,7 @@ h2{
   .navbar{
     width: 650px;
     flex-direction: row;
+    /* margin-bottom: 20px; */
   }
 
   .menu{
@@ -257,19 +258,31 @@ h2{
     padding-top: 100px;
   }
 
-  .acticle-preview{
-    height: 500px;
+  .acticle-preview, 
+  .article-preview h2, 
+  .article-preview p{
+    /* height: 500px; */
     width: 700px;
     flex-direction:column ;
   }
 
+  .featured{
+    margin-top: 60px;
+  }
   .featured .feat-img{
     width: 700px;
   }
 
   .acticle-preview h2{
-    margin-bottom: 30px;
+    margin-bottom: 0px;
     margin-top: 30px;
+    width: 700px;
+
+  }
+
+  .preview p{
+    width: 700px;
+    font-size: 30px;
   }
 
   .acticle-preview button{
@@ -318,19 +331,32 @@ h2{
     font-size: 25px;
   }
 }
-/* 
-@media (min-width: 1440px){
-  .navbar{
-    width: 1000;
-    margin-left: 800px;
+
+@media (max-width: 800px){
+  .navbar {
+    width: 700px;
+    margin-left: 700px;
   }
 
   .navbar .logo{
-    
+    position: absolute;
+    margin-left: -600px;
   }
-
-  .navbar .buttons{
+  .buttons{
+    /* width: 600px; */
+    /* margin-left: 50px; */
+    margin-right: 50px;
     display: flex;
     flex-direction: row;
   }
-} */
+}
+
+@media (min-width: 900px){
+
+  .navbar{
+    width: 1400px;
+  }
+  /* .buttons{
+    margin-left: 600px;
+  } */
+}

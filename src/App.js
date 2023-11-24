@@ -18,7 +18,7 @@ function App() {
   const screenSize = ScreenSize()
 
   useEffect(() => {
-    if (screenSize.width < 500){
+    if (screenSize.width < 700){
       setIsMobile(true)
     }
   }, [screenSize.width]);
