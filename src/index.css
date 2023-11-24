@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+  
+}
+
+/* body{
+  --bright: brightness(100%);
+  filter: var(--bright);
+} */
+
+/* body{
+  filter: brightness(100%);
+} */
+
+main{
+  display: flex;
+  flex-direction: row;
+  width: 1440px;
+}
+
+.navbar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.navbar .logo{
+  margin-left: 70px;
+}
+
+.navbar .buttons{
+  margin-right: 70px;
+  
+}
+
+.navbar .btn{
+  margin: 20px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+}
+
+.navbar .btn:active, .navbar .btn:hover{
+  color: hsl(5, 85%, 63%);
+}
+
+.featured{
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  margin-left: 70px;
+  margin-top: 30px;
+}
+
+.featured .feat-img{
+  width: 800px;
+  height: 400px;
+}
+
+.acticle-preview{
+  display: flex;
+  flex-direction: row;
+}
+
+h2{
+  width: 400px;
+  height: 200px;
+  font-size: 70px;
+  font-weight: 800;
+  margin-right: 20px;
+}
+
+.preview{
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  height: 300px;
+  margin-top: 20px;
+}
+
+.preview p{
+  width: 450px;
+  font-size: 20px;
+  line-height: 150%;
+}
+
+.preview button{
+  color: white;
+  background-color: hsl(5, 85%, 63%);
+  border: none;
+  width: 200px;
+  height: 80px;
+  margin-top: 30px;
+  font-size: 20px;
+}
+
+.preview button:hover{
+  background-color: hsl(240, 100%, 5%);
+}
+
+/* Styling for New Articles Box */
+
+.newbox{
+  width: 400px;
+  height: 720px;
+  margin-left: 50px;
+  margin-top: 30px;
+  color: white;
+  background-color: hsl(240, 100%, 5%);
+  padding: 20px;
+}
+
+.newbox h2{
+  height: 100px;
+  font-size: 50px;
+  color: hsl(35, 77%, 62%);
+}
+
+.newbox hr{
+  margin-bottom: 10px;
+}
+
+.newbox .new-article{
+  height: 180px;
+}
+
+.newbox .new-article:hover{
+  color: hsl(35, 77%, 62%);
+}
+
+.new-article h3{
+  font-size: 25px;
+}
+
+.new-article p{
+  margin-top: 10px;
+  color: hsl(236, 13%, 42%);
+  font-size: 20px;
+  line-height: 150%;
+}
+
+/* Article Styling */
+
+.articles{
+  display: flex;
+  flex-direction: row;
+  margin-left: 70px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.article{
+  display: flex;
+  flex-direction: row;
+  width: 600px;
+  height: 200px;
+  margin: 0;
+  cursor: pointer;
+  --hover-color: black;
+}
+
+
+.article .image{
+  width: 170px;
+  height: 200px;
+}
+
+.image img{
+  height: 200px;
+}
+
+.article .description{
+  width: 250px;
+  height: 200px;
+  /* padding: 10px; */
+  /* padding-top: -10px; */
+}
+
+.article:hover{
+  --hover-color: hsl(35, 77%, 62%);
+}
+
+.article h2{
+  height: 80px;
+  width: 80px;
+  margin-top: -10px;
+  /* --text-color: hsl(233, 8%, 79%); */
+  color: hsl(233, 8%, 79%);
+  font-size: 50px;
+}
+
+
+
+.article h3{
+  color: black;
+  font-weight: 700;
+  font-size: 22px;
+  margin-top: 0px;
+  color: var(--hover-color);
+}
+
+.article p{
+  line-height: 150%;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+@media (min-width: 370px){
+  main,.featured .feat-img, .acticle-preview, .acticle-preview h2, .acticle-preview p,.newbox,.articles, .article{
+    width: 600px;
+    flex-direction: column;
+  }
+
+  .navbar{
+    width: 650px;
+    flex-direction: row;
+  }
+
+  .menu{
+    margin-right: 0;
+  }
+
+  .ham{
+    position: absolute;
+    background-color: transparent;
+    border: none;
+  }
+
+  /* .ham:focus{
+    --bright: brightness(80%);
+  } */
+
+  .options{
+    width: 250px;
+    height: 1500px;
+    position: absolute;
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    right: -80%;
+    top: 0%;
+    display: flex;
+    align-items: flex-start;
+    /* margin-top: 100px; */
+    padding-top: 100px;
+  }
+
+  .acticle-preview{
+    height: 500px;
+  }
+
+  .acticle-preview h2{
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+
+  .acticle-preview button{
+    width: 300px;
+  }
+  .article{
+    flex-direction: row;
+    width: 600px;
+    margin-bottom: 50px;
+  }
+
+  .article .image, .article img{
+    width: 200px;
+  }
+
+  .article .description{
+    margin-left: 50px;
+    width: 400px;
+  }
+
+  .article p{
+    font-size: 25px;
+  }
+
+  hr{
+    margin-top: 30px;
+  }
+
+  .newbox{
+    margin-left: 70px;
+  }
+  .new-article h3{
+    font-size: 40px;
+  }
+
+  .new-article p{
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 1000px){
+  
+}
