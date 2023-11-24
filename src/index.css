@@ -211,9 +211,13 @@ h2{
   font-size: 20px;
 }
 
-@media (min-width: 370px){
+@media (max-width: 500px){
   main,.featured .feat-img, .acticle-preview, .acticle-preview h2, .acticle-preview p,.newbox,.articles, .article{
     width: 600px;
+    flex-direction: colummax;
+  }
+
+  main{
     flex-direction: column;
   }
 
@@ -228,6 +232,7 @@ h2{
 
   .ham{
     position: absolute;
+    margin-left: 70px;
     background-color: transparent;
     border: none;
   }
@@ -254,6 +259,12 @@ h2{
 
   .acticle-preview{
     height: 500px;
+    width: 700px;
+    flex-direction:column ;
+  }
+
+  .featured .feat-img{
+    width: 700px;
   }
 
   .acticle-preview h2{
@@ -264,10 +275,17 @@ h2{
   .acticle-preview button{
     width: 300px;
   }
+
+  .articles{
+    width: 700px;
+    flex-direction: column; 
+  }
+
   .article{
-    flex-direction: row;
+    flex-direction: column;
     width: 600px;
     margin-bottom: 50px;
+    /* margin-left: 500px; */
   }
 
   .article .image, .article img{
@@ -275,7 +293,8 @@ h2{
   }
 
   .article .description{
-    margin-left: 50px;
+    margin-left: 250px;
+    margin-top: -200px;
     width: 400px;
   }
 
@@ -289,6 +308,7 @@ h2{
 
   .newbox{
     margin-left: 70px;
+    width: 700px;
   }
   .new-article h3{
     font-size: 40px;
@@ -298,7 +318,19 @@ h2{
     font-size: 25px;
   }
 }
+/* 
+@media (min-width: 1440px){
+  .navbar{
+    width: 1000;
+    margin-left: 800px;
+  }
 
-@media (min-width: 1000px){
-  
-}
+  .navbar .logo{
+    
+  }
+
+  .navbar .buttons{
+    display: flex;
+    flex-direction: row;
+  }
+} */
